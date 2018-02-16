@@ -1,0 +1,26 @@
+*starttig.txt*     starttig to support start tig on vim.
+
+Version: 0.1.0
+Author:  hankei6km
+License: Licensed under the MIT License. See LICENSE.txt in the project root.
+
+
+Overview						*starttig-intro*
+
+*starttig* is vim plug-in to support starting tig from vim. it's enable options/refs input completion and suppress hit-enter prompt.
+
+Command         					*starttig-commands*
+
+							*:Stig*
+:Stig			To start tig ( NOTE Error occurs when vim current
+                        directory is not git directory).
+
+:Stig {options}		To start tig. {options} passed to tig as options/
+                        sub-command.
+
+:Stig blame		To start tig blame. pass file-name current edited
+                        to tig blame. ( Note Specifty options after blame,
+                        behaves as :Stig {options}
+
+ vim:tw=78:ts=8:ft=help:norl:
+

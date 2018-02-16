@@ -1,0 +1,28 @@
+*starttig.txt*     Vimからのtig開始をサポート.
+
+Version: 0.1.0
+Author:  hankei6km
+License: Licensed under the MIT License. See LICENSE.txt in the project root.
+
+概要						*starttig-intro*
+
+*starttig* は、 Vim からの tig(http://jonas.nitro.dk/tig/) 開始をサポートする
+Vimプラグインです。tig のオプション等の補完やコマンド終了後の hit-enter プロン
+プトを抑止します。
+
+
+コマンド					*starttig-commands*
+
+							*:Stig*
+:Stig			tig を開始します( NOTE Vim のカレントディレクトリが
+			git ディレクトリでないとエラーになります)。
+
+:Stig {options}		tig を開始します。{options} は tig のオプションや
+			サブコマンドとして tig へ渡されます。	
+
+:Stig blame		tig blame を開始します。編集中ファイルがあれば、
+			表示行とファイル名が tig へ渡されます( NOTE blameの
+			後にオプションを指定すると、:Stig {options} と同じ
+			ように振る舞います)。
+
+ vim:tw=78:ts=8:ft=help:norl:
