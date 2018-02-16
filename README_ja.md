@@ -1,15 +1,32 @@
 # starttig
 
-starttig は、 Vim からの [tig](http://jonas.nitro.dk/tig/)  開始をサポートするVimプラグインです。tig のオプション等の補完やコマンド終了後の hit-enter プロンプトを抑止します。
+starttig は、 Vim からの [Tig](http://jonas.nitro.dk/tig/)  開始をサポートするVimプラグインです。Tig のオプション等の補完やコマンド終了後の hit-enter プロンプトを抑止します。
 
 ## Requirements
 
-* vim
+* Vim
 * tig
 
 ## Installation
 
-* 一般的な Vim スクリプトと同じようにインストールできます。
+### Vim パッケージ管理によるインストール(Vim 8 on linux).
+
+```bash
+mkdir -p ~/.vim/pack/git-plugins/start
+git clone https://github.com/hankei6km/starttig.vim.git ~/.vim/pack/git-plugins/start/stattig.vim
+```
+
+help ファイルの作成例.
+
+```bash
+vim "+silent! helptags ALL" +qall
+```
+
+### [Vundle](https://github.com/VundleVim/Vundle.vim) によるインストール.
+
+```vim
+Plugin 'hankei6km/starttig.vim'
+```
 
 ## Usage
 

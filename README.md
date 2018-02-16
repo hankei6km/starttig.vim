@@ -1,31 +1,50 @@
 # starttig
 
-starttig is vim plug-in to support starting [tig](http://jonas.nitro.dk/tig/) from vim. it's enable options/refs input completion and suppress hit-enter prompt.
+starttig is Vim plug-in to support starting [Tig](http://jonas.nitro.dk/tig/) from Vim. it's enable options/refs input completion and suppress hit-enter prompt.
 
 ## Requirements
 
-* vim
-* tig
+* Vim
+* Tig
 
 ## Installation
 
-* Install startig like as general vim plug-ins
+### Installation with Vim package management(Vim 8 on linux)
+
+```bash
+# ie.
+mkdir -p ~/.vim/pack/git-plugins/start
+git clone https://github.com/hankei6km/starttig.vim.git ~/.vim/pack/git-plugins/start/stattig.vim
+```
+
+Generating Vim help files.
+
+```bash
+# ie.
+vim "+silent! helptags ALL" +qall
+```
+
+### Installation with [Vundle](https://github.com/VundleVim/Vundle.vim)
+
+```vim
+Plugin 'hankei6km/starttig.vim'
+```
 
 ## Usage
 
-start `tig`
+Starting to `tig`
 
 ```vim
 :Stig
 ```
 
-start `tig` with `topic/foo`
+Starting to `tig` with `topic/foo`
 
 ```vim
 :Stig topic/foo
 ```
 
-start `tig blame` with current edit file
+Starting to `tig blame` with current editing file
 
 ```vim
 :Stig blame
@@ -33,13 +52,13 @@ start `tig blame` with current edit file
 
 ## Customize
 
-Change command name.
+Customizing command name.
 
 ```vim
 call starttig#SetTigCmdName("Tig")
 ```
 
-Set default options (it's enable when passed options is blanked).
+Default options (it's enable when passed options is blanked).
 
 ```vim
 call starttig#SetTigBlankedOpt(["--all"])
